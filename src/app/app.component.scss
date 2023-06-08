@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  //background-color: rgb(54, 52, 52);
+  background-image: conic-gradient(
+    from var(--border-angle),
+    #213,
+    #112 50%,
+    #213
+  );
+  overflow-x: hidden;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --border-size: 3px;
+  --border-angle: 0turn;
+  width: 260px;
+  height: 46px;
+  color: white;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 3s linear infinite;
+  animation-play-state: paused;
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  &:hover {
+    transition: all ease 400ms;
+    transform: scale(1.2);
+    animation-play-state: running;
+    cursor: pointer;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.game-container {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.whos-turn {
+    color: white;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 32px;
+    color: white;
+    padding: 0px 20px 0px 20px;
+}
+
+.termos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+
+    color: white;
+    position: absolute;
+    max-width: 500px;
+    font-size: 20px;
+    padding: 0px 20px 30px 20px;
+}
