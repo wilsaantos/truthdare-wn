@@ -207,17 +207,17 @@ export const dares: Card[] = [
   {
     id: 10,
     type: 'Desafio',
-    content: 'O que ele(a) faz que te deixa muito feliz?',
+    content: 'Faça um jogo de sedução com seu parceiro(a) usando apenas toques suaves.',
   },
   {
     id: 11,
     type: 'Desafio',
-    content: 'O que te faz sentir ciúmes?',
+    content: 'Dê uma mordidinha em um lugar de sua escolha nele(a)',
   },
   {
     id: 12,
     type: 'Desafio',
-    content: 'Pra você qual foi o momento mais feliz do relacionamento?',
+    content: 'Mande uma mensagem ousada para ele(a)',
   },
   {
     id: 13,
@@ -306,7 +306,7 @@ export const dares: Card[] = [
       'Escreva um poema romântico para o seu parceiro(a) e leia em voz alta.',
   },
   {
-    id: 22,
+    id: 25,
     type: 'Desafio',
     content:
       'Faça uma declaração de amor improvisada para o seu parceiro(a) usando apenas palavras que começam com a letra "S".',
